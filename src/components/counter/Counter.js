@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 
-function Counter({ state }) {
-  const [count, setCount] = useState(state.count);
+function Counter(props) {
+  const [count, setCount] = useState(0);
   return (
     <div className="container">
       <h1>Counter</h1>
-      <p className="counter">{count}</p>
+      <p className="counter">{props.count}</p>
       <div className="buttons">
         <button
           type="button"
@@ -29,4 +30,8 @@ function Counter({ state }) {
   );
 }
 
-export default Counter;
+function mapStateToProps(state) {
+  return { count: state.count };
+}
+
+export default connect(mapStateToProps)(Counter);

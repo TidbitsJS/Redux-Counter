@@ -24,3 +24,7 @@
 > Don't Mutate state -> redux built on immutability
 
 > `immutability` -> makes a copy
+
+#
+
+> `provider` & `connect` -> react-redux

@@ -2,6 +2,7 @@ import React from "react";
 
 import "./App.css";
 import { createStore } from "redux";
+import { Provider } from "react-redux";
 
 import Counter from "./components/counter/Counter";
 import { DECREASE, INCREASE, RESET } from "./config/Actions";
@@ -14,19 +15,11 @@ const defaultState = {
 
 const store = createStore(reducer, defaultState);
 
-store.dispatch({ type: DECREASE });
-store.dispatch({ type: INCREASE });
-store.dispatch({ type: INCREASE });
-store.dispatch({ type: RESET });
-store.dispatch({ type: INCREASE });
-
-console.log(store.getState());
-
 function App() {
   return (
-    <div className="App">
-      <Counter state={store.getState()} />
-    </div>
+    <Provider store={store}>
+      <Counter />
+    </Provider>
   );
 }
 
