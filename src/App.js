@@ -5,7 +5,9 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 import Counter from "./components/counter/Counter";
+
 import countReducer from "./components/counter/CountReducer";
+import productReducer from "./components/product/ProductReducer";
 
 const defaultState = {
   count: 7,
