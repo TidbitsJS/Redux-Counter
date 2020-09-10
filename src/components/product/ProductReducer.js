@@ -1,9 +1,17 @@
 import { SET_LOADING, GET_PRODUCTS } from "../../config/Actions";
 
 const defaultState = {
-  name: "Product Reducer",
+  loading: false,
+  products: [],
 };
 
 export default function productReducer(state = defaultState, action) {
-  return state;
+  switch (action.type) {
+    case SET_LOADING:
+      return { ...state, loading: true };
+    case GET_PRODUCTS:
+      return { ...state, loading: false, products: action.payload };
+    default:
+      return state;
+  }
 }
