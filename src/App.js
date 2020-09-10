@@ -8,6 +8,7 @@ import thunk from "redux-thunk";
 
 import Counter from "./components/counter/Counter";
 import Modal from "./components/modal/Modal";
+import Product from "./components/product/Product";
 
 import countReducer from "./components/counter/CountReducer";
 import productReducer from "./components/product/ProductReducer";
@@ -29,6 +30,7 @@ function App() {
     <Provider store={store}>
       <Counter />
       <Modal />
+      <Product />
     </Provider>
   );
 }
