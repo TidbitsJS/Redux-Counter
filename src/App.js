@@ -10,13 +10,20 @@ const defaultState = {
   name: "bob",
 };
 
-function reducer(state = defaultState, action) {
+function reducer(state, action) {
   console.log({ state, action });
+  if (action.type === "DECREASE") {
+    console.log("Hey it worked");
+    return { ...state, count: state.count - 1 };
+  }
+
   return state;
 }
 
-const store = createStore(reducer);
+const store = createStore(reducer, defaultState);
 
+store.dispatch({ type: "DECREASE" });
+store.dispatch({ type: "DECREASE" });
 console.log(store.getState());
 
 function App() {
