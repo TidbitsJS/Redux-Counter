@@ -38,7 +38,8 @@ export const getProducts = () => {
   return async function (dispatch) {
     dispatch(setLoading());
     const response = await fetch("http://jsonplaceholder.typicode.com/photos");
-    const data = await response.json();
+    let data = await response.json();
+    data = data.splice(0, 10);
     console.log(data);
     dispatch({ type: GET_PRODUCTS, payload: data });
   };
