@@ -5,7 +5,6 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 import Counter from "./components/counter/Counter";
-import { DECREASE, INCREASE, RESET } from "./config/Actions";
 import reducer from "./config/Reducers";
 
 const defaultState = {

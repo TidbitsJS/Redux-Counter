@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
+import { DECREASE, INCREASE, RESET } from "../../config/Actions";
 
 function Counter(props) {
-  const [count, setCount] = useState(0);
   return (
     <div className="container">
       <h1>Counter</h1>
@@ -10,17 +10,21 @@ function Counter(props) {
       <div className="buttons">
         <button
           type="button"
-          onClick={() => setCount(count - 1)}
+          onClick={() => props.dispatch({ type: DECREASE })}
           className="btn"
         >
           decrease
         </button>
-        <button type="button" onClick={() => setCount(0)} className="btn">
+        <button
+          type="button"
+          onClick={() => props.dispatch({ type: RESET })}
+          className="btn"
+        >
           reset
         </button>
         <button
           type="button"
-          onClick={() => setCount(count + 1)}
+          onClick={() => props.dispatch({ type: INCREASE })}
           className="btn"
         >
           increase
