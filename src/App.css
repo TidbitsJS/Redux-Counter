@@ -8,24 +8,19 @@ body {
   font-family: serif;
   color: #222;
   background: #fff;
-  line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
 }
 
-p {
-  margin-bottom: 1.25rem;
-}
-
 .btn {
-  text-transform: capitalize;
-  color: #222;
-  border: #222;
+  color: var(--mainBlack);
+  border: 2px solid #222;
   padding: 0.45rem 0.8rem;
   display: inline-block;
-  transition: all 0.3s linear;
+  transition: all 0.5s linear;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  text-transform: capitalize;
   border-radius: 0.25rem;
   background: transparent;
 }
@@ -40,6 +35,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   text-align: center;
   text-transform: capitalize;
 }
@@ -130,7 +126,7 @@ p {
 @media screen and (min-width: 768px) {
   .products {
     max-width: 35rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 4rem;
   }
 }
