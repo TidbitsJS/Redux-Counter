@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-function Counter() {
-  const [count, setCount] = useState(0);
+function Counter({ state }) {
+  const [count, setCount] = useState(state.count);
   return (
     <div className="container">
       <h1>Counter</h1>

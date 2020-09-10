@@ -10,19 +10,19 @@ const defaultState = {
   name: "bob",
 };
 
-function reducer(state, action) {
+function reducer(state = defaultState, action) {
   console.log({ state, action });
-  return "Hello Redux";
+  return state;
 }
 
-const store = createStore(reducer, defaultState);
+const store = createStore(reducer);
 
 console.log(store.getState());
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <Counter state={store.getState()} />
     </div>
   );
 }
