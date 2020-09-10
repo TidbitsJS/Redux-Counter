@@ -5,6 +5,7 @@ import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 
 import Counter from "./components/counter/Counter";
+import Modal from "./components/modal/Modal";
 
 import countReducer from "./components/counter/CountReducer";
 import productReducer from "./components/product/ProductReducer";
@@ -23,6 +24,7 @@ function App() {
   return (
     <Provider store={store}>
       <Counter />
+      <Modal />
     </Provider>
   );
 }
