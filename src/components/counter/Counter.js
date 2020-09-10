@@ -34,8 +34,22 @@ function Counter(props) {
   );
 }
 
-function mapStateToProps(state) {
-  return { count: state.count };
+function mapStateToProps({ countState: { count, name } }) {
+  return { count: count, name: name };
 }
+
+/*
+
+function mapDispatchToProps(dispatch, ownProps) {
+  console.log(ownProps)
+
+  return {
+    increase: () => dispatch({ type: INCREASE }),
+    decrease: () => dispatch({ type: DECREASE }),
+    reset: () => dispatch({ type: RESET })
+  }
+}
+
+*/
 
 export default connect(mapStateToProps)(Counter);

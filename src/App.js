@@ -1,13 +1,14 @@
 import React from "react";
 
 import "./App.css";
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 
 import Counter from "./components/counter/Counter";
 
 import countReducer from "./components/counter/CountReducer";
 import productReducer from "./components/product/ProductReducer";
+import modalReducer from "./components/modal/ModalReducer";
 
 const defaultState = {
   count: 7,
@@ -15,7 +16,11 @@ const defaultState = {
 };
 
 const store = createStore(
-  countReducer,
+  combineReducers({
+    countState: countReducer,
+    modalState: modalReducer,
+    productState: productReducer,
+  }),
   defaultState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
