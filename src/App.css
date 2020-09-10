@@ -83,10 +83,10 @@ body {
   max-width: 30rem;
   margin: 0 auto;
   margin-top: -6rem;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   text-align: center;
   text-transform: capitalize;
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
   transition: all 0s ease-in-out;
 }
 
