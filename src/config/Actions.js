@@ -7,3 +7,25 @@ export const MODAL_CLOSE = "MODAL_CLOSE";
 
 export const SET_LOADING = "SET_LOADING";
 export const GET_PRODUCTS = "GET_PRODUCTS";
+
+/*
+
+export const decrease = () => {
+    return { type: DECREASE }
+}
+
+export const increase = () => {
+    return { type: INCREASE }
+}
+
+export const reset = () => {
+    return { type: RESET }
+}
+
+export const modalOpen = (name, text) => {
+    return { type: MODAL_OPEN, payload: {
+        name, text
+    } }
+}
+
+*/
