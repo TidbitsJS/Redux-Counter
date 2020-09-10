@@ -10,18 +10,12 @@ import countReducer from "./components/counter/CountReducer";
 import productReducer from "./components/product/ProductReducer";
 import modalReducer from "./components/modal/ModalReducer";
 
-const defaultState = {
-  count: 7,
-  name: "bob",
-};
-
 const store = createStore(
   combineReducers({
     countState: countReducer,
     modalState: modalReducer,
     productState: productReducer,
   }),
-  defaultState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
