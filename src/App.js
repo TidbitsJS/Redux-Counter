@@ -12,7 +12,11 @@ const defaultState = {
   name: "bob",
 };
 
-const store = createStore(reducer, defaultState);
+const store = createStore(
+  reducer,
+  defaultState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 function App() {
   return (
