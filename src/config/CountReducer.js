@@ -1,6 +1,11 @@
 import { DECREASE, INCREASE, RESET } from "./Actions";
 
-export default function reducer(state, action) {
+const defaultState = {
+  count: 7,
+  name: "bob",
+};
+
+export default function reducer(state = defaultState, action) {
   console.log({ state, action });
 
   switch (action.type) {
