@@ -12,18 +12,25 @@ const defaultState = {
 
 function reducer(state, action) {
   console.log({ state, action });
-  if (action.type === "DECREASE") {
-    console.log("Hey it worked");
-    return { ...state, count: state.count - 1 };
-  }
 
-  return state;
+  switch (action.type) {
+    case "DECREASE":
+      return { ...state, count: state.count - 1 };
+    case "INCREASE":
+      return { ...state, count: state.count + 1 };
+    case "RESET":
+      return { ...state, count: 0 };
+    default:
+      return state;
+  }
 }
 
 const store = createStore(reducer, defaultState);
 
 store.dispatch({ type: "DECREASE" });
-store.dispatch({ type: "DECREASE" });
+store.dispatch({ type: "INCREASE" });
+store.dispatch({ type: "INCREASE" });
+store.dispatch({ type: "RESET" });
 console.log(store.getState());
 
 function App() {
