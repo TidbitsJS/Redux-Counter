@@ -29,3 +29,16 @@ export const modalOpen = (name, text) => {
 }
 
 */
+
+export const setLoading = () => {
+  return { type: SET_LOADING };
+};
+
+export const getProducts = () => {
+  return async function (dispatch) {
+    dispatch(setLoading());
+    const response = await fetch("http://jsonplaceholder.typicode.com/photos");
+    const data = await response.json();
+    dispatch({ type: getProducts, payload: data });
+  };
+};
