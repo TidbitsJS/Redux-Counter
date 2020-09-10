@@ -1,4 +1,4 @@
-import { DECREASE, INCREASE, RESET } from "./Actions";
+import { DECREASE, INCREASE, RESET } from "../../config/Actions";
 
 const defaultState = {
   count: 7,
