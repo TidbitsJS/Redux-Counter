@@ -126,14 +126,22 @@ ul {
   text-align: center;
 }
 
+.product h4 {
+  padding: 0 1rem;
+}
+
 .product img {
   width: 100%;
 }
 
 @media screen and (min-width: 768px) {
   .products {
-    max-width: 45rem;
+    max-width: 50rem;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 4rem;
+  }
+
+  .product h4 {
+    padding: 0 2px;
   }
 }

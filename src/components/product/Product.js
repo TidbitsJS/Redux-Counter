@@ -17,7 +17,11 @@ const Product = ({ getProducts, loading, products }) => {
         {products.map((item) => {
           return (
             <li key={item.id} className="product">
-              <img src={item.url} alt={item.title} />
+              <img
+                src={item.url}
+                style={{ borderRadius: 10 }}
+                alt={item.title}
+              />
               <h4>{item.title}</h4>
             </li>
           );
