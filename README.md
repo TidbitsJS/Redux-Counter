@@ -1,3 +1,11 @@
+Simple counter app using Redux. 
+
+#### `Notes`
+1) Counter with basic functions
+2) Setting counter to the reset mode will open a modal , which is handled using separate modalReducer
+3) Below the counter app, there is list of item fetched using fake json generator. Data loading is separately handled by productReducer.
+4) CounterReducer, modalReducer & productReducer are combined using combineReducer of react-redux
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
